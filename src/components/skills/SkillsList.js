@@ -35,11 +35,10 @@ export default function SkillsList({skills, title}) {
         <Divider className={classes.divider} variant="middle" />
       </Grid>
       <Grid md={12}>
-        <div >
           <List>
             {skills.map(skill => {
               return (
-                <ListItem>
+                <ListItem dense={true}>
                   <ListItemText
                     css={{textAlign: "center"}}
                     primary={skill}
@@ -48,7 +47,6 @@ export default function SkillsList({skills, title}) {
               )
             })}
           </List>
-        </div>
       </Grid>
     </Grid>
   )
