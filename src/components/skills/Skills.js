@@ -13,7 +13,7 @@ import Divider from "@material-ui/core/Divider";
 const useStyles = makeStyles({
   cardContainer: {
     marginTop: -170,
-    marginBottom: 350,
+    marginBottom: 200,
     justifyContent: "center"
   },
   cardTop: {
