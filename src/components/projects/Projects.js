@@ -6,6 +6,8 @@ import colors from "../../styles/colors";
 import PresqtProject from "./PresqtProject";
 import BlancoProject from "./BlancoProject";
 import SRPeruProject from "./SRPeruProject";
+import Typography from "@material-ui/core/Typography";
+import Divider from "@material-ui/core/Divider";
 
 const useStyles = makeStyles({
   GridContainer: {},
@@ -13,7 +15,13 @@ const useStyles = makeStyles({
     height: 500,
     width: "100%",
     border: `1px solid ${colors.main}`
-  }
+  },
+  divider: {
+    width: 50,
+    backgroundColor: "black",
+    marginTop: 10,
+    marginBottom: 20
+  },
 });
 
 export default function Projects() {
@@ -27,6 +35,10 @@ export default function Projects() {
       alignItems="center"
       className={classes.GridContainer}
     >
+      <Typography className={classes.typography} variant="h4">
+        Projects
+      </Typography>
+      <Divider className={classes.divider} variant="middle" />
       <PresqtProject />
       <BlancoProject />
       <SRPeruProject />
