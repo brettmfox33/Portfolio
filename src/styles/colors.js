@@ -1,9 +1,15 @@
 export default {
-  // #f8c687 //Light Orange
-  // #e29470 Middle Orange
-  // #e57e00 Deep Orange
-  // #679895 Nice Green
-  presqtOrange: '#e48f34',
-  blancoPurple: '#c464f6',
-  main: '#679895'
+  main: '#679895',
+
+  // PresQT Project
+  presqtOrange: '#d18f47',
+  presQTOrangeLight: '#d69b5c',
+
+  // Blanco Project
+  blancoPurple: '#bb81da',
+  blancoPurpleLight: '#ca9ce3',
+
+  // SR Peru Project
+  srPeruBlue: '#16456a',
+  srPeruBlueLight: '#1e6194'
 };

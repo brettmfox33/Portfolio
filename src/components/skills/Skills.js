@@ -102,7 +102,7 @@ export default function Skills() {
       {/* TOP CARDS*/}
       <Grid container className={classes.cardTop} spacing={0}>
         {/* LEFT CARD*/}
-        <Grid md={2}>
+        <Grid item md={2}>
           <Card className={classes.cardLeft} variant="outlined">
             <CardContent>
               <SkillsList skills={backEndSkills} title="Back-End"/>
@@ -111,7 +111,7 @@ export default function Skills() {
         </Grid>
 
         {/* RIGHT CARD*/}
-        <Grid md={2}>
+        <Grid item md={2}>
           <Card className={classes.cardRight} variant="outlined">
             <CardContent>
               <SkillsList skills={frontEndSkills} title="Front-End"/>
@@ -121,7 +121,7 @@ export default function Skills() {
       </Grid>
 
       {/* BOTTOM CARD*/}
-        <Grid md={4}>
+        <Grid item md={4}>
           <Card className={classes.cardBottom} variant="outlined">
             <CardContent>
               <SkillsList skills={nonTechnicalSkills} title="Non-Technical / Other"/>
