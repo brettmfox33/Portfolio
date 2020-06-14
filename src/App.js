@@ -3,14 +3,14 @@ import './App.css';
 import Header from "./components/header/Header";
 import Skills from "./components/skills/Skills";
 import Footer from "./components/footer/Footer";
-import Project from "./components/projects/Projects";
+import Projects from "./components/projects/Projects";
 
 function App() {
   return (
     <Fragment>
       <Header />
       <Skills />
-      <Project />
+      <Projects />
       <Footer />
     </Fragment>
   );

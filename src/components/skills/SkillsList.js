@@ -13,6 +13,10 @@ const useStyles = makeStyles({
     width: 50,
     backgroundColor: "black",
     marginTop: 10
+  },
+  listText: {
+    fontSize: 20,
+    textAlign: "center"
   }
 });
 
@@ -34,21 +38,19 @@ export default function SkillsList({skills, title}) {
       <Grid>
         <Divider className={classes.divider} variant="middle" />
       </Grid>
-      <Grid md={12}>
-        <div >
+      <Grid item md={12}>
           <List>
             {skills.map(skill => {
               return (
-                <ListItem>
+                <ListItem key={skill} dense={true}>
                   <ListItemText
-                    css={{textAlign: "center"}}
+                    classes={{ primary: classes.listText }}
                     primary={skill}
                   />
                 </ListItem>
               )
             })}
           </List>
-        </div>
       </Grid>
     </Grid>
   )
