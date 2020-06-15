@@ -7,11 +7,15 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import makeStyles from "@material-ui/core/styles/makeStyles";
+import colors from "../../styles/colors";
 
 const useStyles = makeStyles({
+  title: {
+    color: colors.main
+  },
   divider: {
     width: 50,
-    backgroundColor: "black",
+    backgroundColor: colors.main,
     marginTop: 10
   },
   listText: {
@@ -31,7 +35,7 @@ export default function SkillsList({skills, title}) {
       alignItems="center"
     >
       <Grid>
-        <Typography variant="h5">
+        <Typography className={classes.title} variant="h5">
           {title}
         </Typography>
       </Grid>
