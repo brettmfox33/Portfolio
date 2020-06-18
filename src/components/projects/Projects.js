@@ -21,7 +21,7 @@ const useStyles = makeStyles({
     backgroundColor: "black",
     marginTop: 10,
     marginBottom: 20
-  },
+  }
 });
 
 export default function Projects() {
@@ -35,7 +35,7 @@ export default function Projects() {
       alignItems="center"
       className={classes.GridContainer}
     >
-      <Typography className={classes.typography} variant="h4">
+      <Typography variant="h4">
         Projects
       </Typography>
       <Divider className={classes.divider} variant="middle" />

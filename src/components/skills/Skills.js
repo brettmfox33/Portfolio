@@ -9,6 +9,9 @@ import colors from "../../styles/colors";
 import SkillsList from "./SkillsList";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
+import StorageIcon from '@material-ui/icons/Storage';
+import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
+import ComputerIcon from '@material-ui/icons/Computer';
 
 const useStyles = makeStyles({
   cardContainer: {
@@ -20,21 +23,21 @@ const useStyles = makeStyles({
     justifyContent: "center"
   },
   cardLeft: {
-    borderLeft: `1px solid ${colors.main}`,
-    borderTop: `1px solid ${colors.main}`,
-    borderRight: `1px solid ${colors.main}`,
+    borderLeft: `2px solid ${colors.main}`,
+    borderTop: `2px solid ${colors.main}`,
+    borderRight: `2px solid ${colors.main}`,
     borderRadius: "20px 0px 0px 0px",
-    height: "100%"
+    height: 600
   },
   cardRight: {
-    borderRight: `1px solid ${colors.main}`,
-    borderTop: `1px solid ${colors.main}`,
+    borderRight: `2px solid ${colors.main}`,
+    borderTop: `2px solid ${colors.main}`,
     borderLeft: 0,
     borderRadius: "0px 20px 0px 0px",
     height: "100%"
   },
   cardBottom: {
-    border: `1px solid ${colors.main}`,
+    border: `2px solid ${colors.main}`,
     borderRadius: "0px 0px 20px 20px",
   },
   divider: {
@@ -48,34 +51,56 @@ const useStyles = makeStyles({
   }
 });
 
-const backEndSkills = [
+const backEndSkillsListOne = [
+  "Python",
   "Django",
   "Django Rest Framework",
   "PostgreSQL",
-  "Database Normalization",
-  "ETL Scripting",
   "Sphinx",
-  "Read The Docs"
 ];
+const backEndSkillsListTwo = [
+  "PyCharm",
+  "ETL Scripting",
+  "Unit/Integration Testing",
+  "Database Normalization",
+  "Multiprocessing",
+  "ReadTheDocs",
+  "API"
+];
+const backEndValues = 'I love da back-end! I have the best time with the back-end. People always ask me, ' +
+  '"Brett, how do you have such a good time with the back-end.';
 
-const frontEndSkills = [
+const frontEndSkillsOne = [
   "React",
-  "Redux",
-  "Redux Saga",
+  "React-Redux",
+  "Redux-Saga",
   "Socket.io",
+  "Emotion Core",
   "Express",
   "Material-UI",
-  "HTML5 Drag and Drop API",
-  "Framer Motion"
+  "HTML5 Drag and Drop",
+  "Framer Motion",
+  "Create-React-App",
+  "Adobe XD"
 ];
+const frontEndSkillsTwo = [];
+const frontEndValues = 'I love da front-end! I have the best time with the front-end. People always ask me, ' +
+  '"Brett, how do you have such a good time with the front-end.';
 
-const nonTechnicalSkills = [
+const nonTechnicalSkillsOne = [
   "AWS",
+  "Github",
+  "Git",
+  "Jira"
+];
+const nonTechnicalSkillsTwo = [
   "Scrum",
-  "Product Owner",
   "Pair Programming",
   "High Client Engagement"
 ];
+const nonTechnicalValues = 'I love da communication! I have the best time with the communication. People always ask me, ' +
+  '"Brett, how do you have such a good time with the communication.';
+
 
 export default function Skills() {
   const classes = useStyles();
@@ -102,29 +127,46 @@ export default function Skills() {
       {/* TOP CARDS*/}
       <Grid container className={classes.cardTop} spacing={0}>
         {/* LEFT CARD*/}
-        <Grid item md={2}>
+        <Grid item md={3}>
           <Card className={classes.cardLeft} variant="outlined">
             <CardContent>
-              <SkillsList skills={backEndSkills} title="Back-End"/>
+              <SkillsList skillsListOne={backEndSkillsListOne}
+                          skillsListTwo={backEndSkillsListTwo}
+                          title="Back-End"
+                          values={backEndValues}
+                          icon={<ComputerIcon fontSize="large" />}
+              />
             </CardContent>
           </Card>
         </Grid>
 
         {/* RIGHT CARD*/}
-        <Grid item md={2}>
+        <Grid item md={3}>
           <Card className={classes.cardRight} variant="outlined">
             <CardContent>
-              <SkillsList skills={frontEndSkills} title="Front-End"/>
+              <SkillsList
+                skillsListOne={frontEndSkillsOne}
+                skillsListTwo={frontEndSkillsTwo}
+                title="Front-End"
+                values={frontEndValues}
+                icon={<StorageIcon fontSize="large" />}
+              />
             </CardContent>
           </Card>
         </Grid>
       </Grid>
 
       {/* BOTTOM CARD*/}
-        <Grid item md={4}>
+        <Grid item md={6}>
           <Card className={classes.cardBottom} variant="outlined">
             <CardContent>
-              <SkillsList skills={nonTechnicalSkills} title="Non-Technical / Other"/>
+              <SkillsList
+                skillsListOne={nonTechnicalSkillsOne}
+                skillsListTwo={nonTechnicalSkillsTwo}
+                title="Non-Technical / Other"
+                values={nonTechnicalValues}
+                icon={<SupervisedUserCircleIcon fontSize="large" />}
+              />
             </CardContent>
           </Card>
         </Grid>

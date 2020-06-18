@@ -31,7 +31,7 @@ export default function Header() {
       />
       <Grid>
         <Typography variant="h3" css={{textAlign: "center", color: 'white', marginTop: 20}}>
-          Welcome! My name's Brett.
+          Hello! My name's Brett.
           <br/>
           I'm a full-stack developer specializing in React and Django.
         </Typography>
