@@ -2,18 +2,13 @@
 import { jsx } from '@emotion/core'
 import Grid from "@material-ui/core/Grid";
 import makeStyles from "@material-ui/core/styles/makeStyles";
-import colors from "../../styles/colors";
-import PresqtProject from "./PresqtProject";
-import BlancoProject from "./BlancoProject";
-import SRPeruProject from "./SRPeruProject";
+import data from "../../data.json"
+import Project from "./Project"
 
 const useStyles = makeStyles({
-  GridContainer: {},
-  ProjectGridContainer: {
-    height: 500,
-    width: "100%",
-    border: `1px solid ${colors.main}`
-  }
+  GridContainer: {
+    marginBottom: 200
+  },
 });
 
 export default function Projects() {
@@ -27,9 +22,16 @@ export default function Projects() {
       alignItems="center"
       className={classes.GridContainer}
     >
-      <PresqtProject />
-      <BlancoProject />
-      <SRPeruProject />
+      {
+        data.projects.map((projectData, index) => {
+          let side = "left"
+          if (index % 2 !== 0) {
+            side = "right"
+          }
+
+          return <Project key={index} projectData={projectData} side={side} />
+        })
+      }
     </Grid>
   )
 }

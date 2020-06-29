@@ -1,0 +1,134 @@
+{
+    "skills": {
+        "backEnd": {
+            "devTools": [
+                "Python", 
+                "Django",
+                "Django Rest Framework",
+                "PostgreSQL",
+                "Sphinx",
+                "Pycharm"
+            ],
+            "concepts": [
+                "ETL Scripts",
+                "Unit / Integration Testing",
+                "Database Normalization",
+                "Multiprocessing",
+                "RESTful API"
+            ]  
+        },
+        "frontEnd": {
+            "devTools": [
+                "React",
+                "React Redux",
+                "Redux-Saga",
+                "Socket.io",
+                "Material-UI"    
+            ],
+            "concepts": [
+                "State Sharing",
+                "Animations",
+                "React Actions"
+            ]  
+        },
+        "nonTechnical": {
+            "devTools": [
+                "Amazon Web Services",
+                "Github",
+                "Git",
+                "Adobe XD"
+            ],
+            "concepts": [
+                "Documentation",
+                "Scrum",
+                "Client Engagement",
+                "Product Owner",
+                "Pair Programming"
+            ]  
+        }
+    },
+    "projects": [
+      {
+        "title": "Preservation Quality Tool (PresQT)",
+        "backgroundColor": "#d18f47",
+        "description": "PresQT (Preservation Quality Tool) is an open-source tool with RESTful services to improve Preservation and Re-use of Research Data and Software.",
+        "tech": [
+            "Django Rest Framework",
+            "React",
+            "React-Redux",
+            "Redux-Saga",
+            "Python Multiprocessing",
+            "Sphinx"
+          ],
+        "links": [
+          {
+            "title": "Visit Site",
+            "url": "https://presqt-qa.crc.nd.edu/ui/"
+          },
+          {
+            "title": "Back-End Github",
+            "url": "https://github.com/ndlib/presqt"
+          },
+          {
+            "title": "Front-End Github",
+            "url": "https://github.com/ndlib/presqt-ui"
+          },
+          {
+            "title": "Documentation",
+            "url": "https://presqt.readthedocs.io/en/latest/"
+          }
+
+        ],
+        "secondaryColor": "#d69b5c",
+        "image": "presqt_browser.png"
+    },
+    {
+      "title": "Blanco",
+      "backgroundColor": "#bb81da",
+      "description": "Blanco is a web port of a popular board game called Azul. It uses Socket.io to share state between clients thus bypassing the need for a database",
+      "tech": [
+        "React",
+        "React-Redux",
+        "Socket.IO",
+        "Express",
+        "Framer Motion",
+        "AWS"
+      ],
+      "links": [
+        {
+          "title": "Visit Site",
+          "url": "https://www.blancogame.com/"
+        },
+        {
+          "title": "React Github",
+          "url": "https://github.com/brettmfox33/Blanco"
+        },
+        {
+          "title": "Socket Github",
+          "url": "https://github.com/brettmfox33/Blanco-Socket-Server"
+        }
+      ],
+      "secondaryColor": "#ca9ce3",
+      "image": "blanco_browser.png"
+    },
+    {
+      "title": "Spatial Repellents: Peru (SR Peru)",
+      "backgroundColor": "#16456a",
+      "description": "I developed a web portal to input paper forms gathered in the field in Peru. I also designed a PostgreSQL database and migrated data from a MySQL database.",
+      "tech": [
+        "Django",
+        "Javascript",
+        "PostgreSQL",
+        "ETL Scripting"
+      ],
+      "links": [
+        {
+          "title": "More Info",
+          "url": "https://spatialrepellents.nd.edu/"
+        }
+      ],
+      "secondaryColor": "#1e6194",
+      "image": "sr_peru_browser.png"
+    }
+  ]  
+}

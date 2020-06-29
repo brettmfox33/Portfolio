@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import Grid from "@material-ui/core/Grid";
-import React from "react";
 import Card from "@material-ui/core/Card";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import CardContent from "@material-ui/core/CardContent";
@@ -9,6 +8,10 @@ import colors from "../../styles/colors";
 import SkillsList from "./SkillsList";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
+import data from "../../data.json"
+import ComputerIcon from '@material-ui/icons/Computer';
+import StorageIcon from '@material-ui/icons/Storage';
+import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
 
 const useStyles = makeStyles({
   cardContainer: {
@@ -20,21 +23,21 @@ const useStyles = makeStyles({
     justifyContent: "center"
   },
   cardLeft: {
-    borderLeft: `1px solid ${colors.main}`,
-    borderTop: `1px solid ${colors.main}`,
-    borderRight: `1px solid ${colors.main}`,
+    borderLeft: `1.5px solid ${colors.main}`,
+    borderTop: `1.5px solid ${colors.main}`,
+    borderRight: `1.5px solid ${colors.main}`,
     borderRadius: "20px 0px 0px 0px",
     height: "100%"
   },
   cardRight: {
-    borderRight: `1px solid ${colors.main}`,
-    borderTop: `1px solid ${colors.main}`,
+    borderRight: `1.5px solid ${colors.main}`,
+    borderTop: `1.5px solid ${colors.main}`,
     borderLeft: 0,
     borderRadius: "0px 20px 0px 0px",
     height: "100%"
   },
   cardBottom: {
-    border: `1px solid ${colors.main}`,
+    border: `1.5px solid ${colors.main}`,
     borderRadius: "0px 0px 20px 20px",
   },
   divider: {
@@ -47,35 +50,6 @@ const useStyles = makeStyles({
     color: "white"
   }
 });
-
-const backEndSkills = [
-  "Django",
-  "Django Rest Framework",
-  "PostgreSQL",
-  "Database Normalization",
-  "ETL Scripting",
-  "Sphinx",
-  "Read The Docs"
-];
-
-const frontEndSkills = [
-  "React",
-  "Redux",
-  "Redux Saga",
-  "Socket.io",
-  "Express",
-  "Material-UI",
-  "HTML5 Drag and Drop API",
-  "Framer Motion"
-];
-
-const nonTechnicalSkills = [
-  "AWS",
-  "Scrum",
-  "Product Owner",
-  "Pair Programming",
-  "High Client Engagement"
-];
 
 export default function Skills() {
   const classes = useStyles();
@@ -102,29 +76,29 @@ export default function Skills() {
       {/* TOP CARDS*/}
       <Grid container className={classes.cardTop} spacing={0}>
         {/* LEFT CARD*/}
-        <Grid item md={2}>
+        <Grid item md={3}>
           <Card className={classes.cardLeft} variant="outlined">
             <CardContent>
-              <SkillsList skills={backEndSkills} title="Back-End"/>
+              <SkillsList icon={<StorageIcon />} data={data.skills.backEnd} title="Back-End"/>
             </CardContent>
           </Card>
         </Grid>
 
         {/* RIGHT CARD*/}
-        <Grid item md={2}>
+        <Grid item md={3}>
           <Card className={classes.cardRight} variant="outlined">
             <CardContent>
-              <SkillsList skills={frontEndSkills} title="Front-End"/>
+              <SkillsList icon={<ComputerIcon />} data={data.skills.frontEnd} title="Front-End"/>
             </CardContent>
           </Card>
         </Grid>
       </Grid>
 
       {/* BOTTOM CARD*/}
-        <Grid item md={4}>
+        <Grid item md={6}>
           <Card className={classes.cardBottom} variant="outlined">
             <CardContent>
-              <SkillsList skills={nonTechnicalSkills} title="Non-Technical / Other"/>
+              <SkillsList icon={<SupervisedUserCircleIcon />} data={data.skills.nonTechnical} title="Non-Technical / Other"/>
             </CardContent>
           </Card>
         </Grid>
