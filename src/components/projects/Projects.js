@@ -4,10 +4,12 @@ import Grid from "@material-ui/core/Grid";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import data from "../../data.json"
 import Project from "./Project"
+import colors from '../../styles/colors';
 
 const useStyles = makeStyles({
   GridContainer: {
-    marginBottom: 200
+    marginBottom: 200,
+    borderTop: `2px solid ${colors.main}`
   },
 });
 

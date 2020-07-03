@@ -7,15 +7,19 @@ import Projects from "./components/projects/Projects";
 import BreakTextOne from './components/break_text/breakTextOne';
 import BreakTextTwo from './components/break_text/breakTextTwo';
 import ContactForm from './components/contact/ContactForm';
+import BreakOne from './components/break_text/BreakOne';
+import BreakTwo from './components/break_text/BreakTwo';
 
 function App() {
   return (
     <Fragment>
       <Header />
       <Skills />
-      <BreakTextOne />
+      {/* <BreakTextOne /> */}
+      <BreakOne />
       <Projects />
-      <BreakTextTwo />
+      {/* <BreakTextTwo /> */}
+      <BreakTwo />
       <ContactForm />
       <Footer />
     </Fragment>

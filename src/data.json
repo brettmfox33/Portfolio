@@ -2,16 +2,15 @@
     "skills": {
         "backEnd": {
             "devTools": [
-                "Python", 
-                "Django",
-                "Django Rest Framework",
-                "PostgreSQL",
-                "Sphinx",
-                "Pycharm"
+              "Python",
+              "Django",
+              "Django Rest Framework",
+              "PostgreSQL",
+              "Sphinx"
             ],
-            "concepts": [
+            "specializations": [
                 "ETL Scripts",
-                "Unit / Integration Testing",
+                "Unit & Integration Testing",
                 "Database Normalization",
                 "Multiprocessing",
                 "RESTful API"
@@ -20,12 +19,12 @@
         "frontEnd": {
             "devTools": [
                 "React",
-                "React Redux",
+                "Redux",
                 "Redux-Saga",
                 "Socket.io",
                 "Material-UI"    
             ],
-            "concepts": [
+            "specializations": [
                 "State Sharing",
                 "Animations",
                 "React Actions"
@@ -36,9 +35,11 @@
                 "Amazon Web Services",
                 "Github",
                 "Git",
+                "PyCharm",
+                "Visual Studio Code",
                 "Adobe XD"
             ],
-            "concepts": [
+            "specializations": [
                 "Documentation",
                 "Scrum",
                 "Client Engagement",

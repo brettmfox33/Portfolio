@@ -12,10 +12,11 @@ import data from "../../data.json"
 import ComputerIcon from '@material-ui/icons/Computer';
 import StorageIcon from '@material-ui/icons/Storage';
 import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
+import { Paper } from '@material-ui/core';
 
 const useStyles = makeStyles({
   cardContainer: {
-    marginTop: -170,
+    marginTop: -100,
     marginBottom: 200,
     justifyContent: "center"
   },
@@ -27,7 +28,7 @@ const useStyles = makeStyles({
     borderTop: `1.5px solid ${colors.main}`,
     borderRight: `1.5px solid ${colors.main}`,
     borderRadius: "20px 0px 0px 0px",
-    height: "100%"
+    height: "100%",
   },
   cardRight: {
     borderRight: `1.5px solid ${colors.main}`,
@@ -57,7 +58,7 @@ export default function Skills() {
   return(
     <Grid container className={classes.cardContainer}>
       {/* SKILLS*/}
-      <Grid
+      {/* <Grid
         container
         direction="column"
         justify="center"
@@ -71,24 +72,24 @@ export default function Skills() {
         <Grid>
           <Divider className={classes.divider} variant="middle" />
         </Grid>
-      </Grid>
+      </Grid> */}
 
       {/* TOP CARDS*/}
       <Grid container className={classes.cardTop} spacing={0}>
         {/* LEFT CARD*/}
         <Grid item md={3}>
-          <Card className={classes.cardLeft} variant="outlined">
+          <Card className={classes.cardLeft} elevation={1}>
             <CardContent>
-              <SkillsList icon={<StorageIcon />} data={data.skills.backEnd} title="Back-End"/>
+              <SkillsList icon={<StorageIcon css={{fontSize: 40}} />} data={data.skills.backEnd} title="Back-End"/>
             </CardContent>
           </Card>
         </Grid>
 
         {/* RIGHT CARD*/}
         <Grid item md={3}>
-          <Card className={classes.cardRight} variant="outlined">
+          <Card className={classes.cardRight} elevation={1}>
             <CardContent>
-              <SkillsList icon={<ComputerIcon />} data={data.skills.frontEnd} title="Front-End"/>
+              <SkillsList icon={<ComputerIcon css={{fontSize: 40}} />} data={data.skills.frontEnd} title="Front-End"/>
             </CardContent>
           </Card>
         </Grid>
@@ -96,9 +97,9 @@ export default function Skills() {
 
       {/* BOTTOM CARD*/}
         <Grid item md={6}>
-          <Card className={classes.cardBottom} variant="outlined">
+          <Card className={classes.cardBottom} elevation={1}>
             <CardContent>
-              <SkillsList icon={<SupervisedUserCircleIcon />} data={data.skills.nonTechnical} title="Non-Technical / Other"/>
+              <SkillsList icon={<SupervisedUserCircleIcon css={{fontSize: 40}} />} data={data.skills.nonTechnical} title="Non-Technical / Other"/>
             </CardContent>
           </Card>
         </Grid>

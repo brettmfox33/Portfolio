@@ -16,7 +16,11 @@ const useStyles = makeStyles({
     marginTop: 10
   },
   listText: {
-    textAlign: "center"
+    textAlign: "center",
+  },
+  listTextRoot: {
+    marginTop: 0,
+    marginBottom: 0,
   },
   subHeaders: {
     color: colors.main,
@@ -24,8 +28,11 @@ const useStyles = makeStyles({
     marginTop: 10
   },
   root: {
-    paddingTop: 1,
-    paddingBottom: 1
+    paddingTop: 0,
+    paddingBottom: 0
+  },
+  title: {
+    marginBottom: 20
   }
 });
 
@@ -40,16 +47,18 @@ export default function SkillsList({data, title, icon}) {
       alignItems="center"
     >
       
-      {/* TITLE */}
-      <Grid>
-        <Typography variant="h5">
-          {title}
-        </Typography>
-      </Grid>
-
       {/* ICON */}
       <Grid>
         {icon}
+      </Grid>
+
+      {/* TITLE */}
+      <Grid
+        className={classes.title}
+      >
+        <Typography variant="h5">
+          {title}
+        </Typography>
       </Grid>
 
       {/* DEV TOOLS */}
@@ -66,7 +75,7 @@ export default function SkillsList({data, title, icon}) {
                   key={skill}
                 >
                   <ListItemText
-                    classes={{ primary: classes.listText }}
+                    classes={{ root: classes.listTextRoot, primary: classes.listText }}
                     primary={skill}
                   />
                 </ListItem>
@@ -75,21 +84,21 @@ export default function SkillsList({data, title, icon}) {
           </List>
       </Grid>
 
-      {/* CONCEPTS */}
+      {/* SPECIALIZATION */}
       <Grid className={classes.subHeaders} >
-        Concepts
+        Specializations
       </Grid>
       <Divider className={classes.divider} variant="middle" />
       <Grid item md={12}>
           <List>
-            {data.concepts.map(skill => {
+            {data.specializations.map(skill => {
               return (
                 <ListItem 
                   className={classes.root}
                   key={skill}
                 >
                   <ListItemText
-                    classes={{ primary: classes.listText }}
+                    classes={{ root: classes.listTextRoot, primary: classes.listText }}
                     primary={skill}
                   />
                 </ListItem>
