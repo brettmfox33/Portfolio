@@ -11,7 +11,8 @@ export default function Project({projectData, side}) {
     projectGridContainer: {
       height: 1000,
       width: "100%",
-      backgroundColor: projectData.backgroundColor
+      // backgroundColor: projectData.backgroundColor,
+      background: projectData.background
     },
   });
   const classes = useStyles();    

@@ -18,7 +18,8 @@ const useStyles = makeStyles({
   cardContainer: {
     marginTop: -100,
     marginBottom: 200,
-    justifyContent: "center"
+    justifyContent: "center",
+    fontFamily: "B612"
   },
   cardTop: {
     justifyContent: "center"

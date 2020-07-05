@@ -17,10 +17,11 @@ const useStyles = makeStyles({
   },
   listText: {
     textAlign: "center",
+    fontFamily: 'B612'
   },
   listTextRoot: {
     marginTop: 0,
-    marginBottom: 0,
+    marginBottom: 0
   },
   subHeaders: {
     color: colors.main,

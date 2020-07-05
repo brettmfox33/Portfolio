@@ -7,7 +7,8 @@ import { Grid } from '@material-ui/core';
 const useStyles = makeStyles({
   header: {
     height: "90vh",
-    backgroundColor: colors.main
+    // backgroundColor: colors.main
+    background: "linear-gradient(0deg, rgba(65,108,106,1) 0%, rgba(103,152,149,1) 60%)"
   },
   content: {
     marginTop: -200,
@@ -25,7 +26,7 @@ const useStyles = makeStyles({
     fontSize: 25,
     marginTop: 70,
     paddingLeft: 300,
-    paddingRight: 300
+    paddingRight: 300,
   }
 });
 
