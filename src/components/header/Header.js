@@ -73,7 +73,7 @@ export default function Header() {
         </Grid>
 
         <Grid className={classes.underText}>
-           I've been in development for 5 years with the University of Notre Dame. I like working with complicated data on the back-end, including normalization ineficient databases.
+           I've been in development for 5 years with the University of Notre Dame. I like working with complicated data on the back-end, including normalizating inefficient databases.
            Most recently I have discovered a passion for front-end development and web design. I highly value customer engagement and I love being able to bring a client's idea to life.
         </Grid>
       </Grid>
