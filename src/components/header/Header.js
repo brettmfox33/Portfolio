@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
-import colors from "../../styles/colors";
+import fonts from "../../styles/fonts";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import { Grid } from '@material-ui/core';
 
@@ -12,25 +12,26 @@ const useStyles = makeStyles({
   content: {
     marginTop: -200,
     color: "white",
-    fontSize: 40,
+    fontSize: fonts.mediumText.fontSize,
     textAlign: "center"
   },
   avatarImage: {
     maxWidth: 200
   },
+  upperText: {
+    fontSize: fonts.largeText.fontSize
+  },
   bottomText: {
+    fontSize: fonts.mediumText.fontSize,
     marginBottom: 30,
     marginTop: 20
   },
   underText: {
-    fontSize: 25,
+    fontSize: fonts.smallText.fontSize,
     marginTop: 70,
     paddingLeft: 450,
     paddingRight: 450,
   },
-  upperText: {
-    fontSize: 50,
-  }
 });
 
 export default function Header() {

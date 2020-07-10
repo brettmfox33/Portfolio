@@ -1,13 +1,13 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import colors from "../../styles/colors";
+import fonts from "../../styles/fonts";
 
 const useStyles = makeStyles({
   divider: {
@@ -17,7 +17,8 @@ const useStyles = makeStyles({
   },
   listText: {
     textAlign: "center",
-    fontFamily: 'B612'
+    fontFamily: 'B612',
+    fontSize: fonts.tinyText.fontSize
   },
   listTextRoot: {
     marginTop: 0,
@@ -25,7 +26,7 @@ const useStyles = makeStyles({
   },
   subHeaders: {
     color: colors.main,
-    fontSize: 20,
+    fontSize: fonts.smallText.fontSize,
     marginTop: 10
   },
   root: {
@@ -37,7 +38,12 @@ const useStyles = makeStyles({
     marginBottom: 20,
     textAlign: "center",
     paddingLeft: 100,
-    paddingRight: 100
+    paddingRight: 100,
+    fontSize: fonts.tinyText.fontSize
+  },
+  title: {
+    fontSize: fonts.smallText.fontSize,
+    fontWeight: 'bold'
   }
 });
 
@@ -61,9 +67,7 @@ export default function HorizontalSkillsList({data, title, icon}) {
       <Grid
         className={classes.title}
       >
-        <Typography variant="h5">
-          {title}
-        </Typography>
+        {title}
       </Grid>
       <Grid className={classes.values}>
         People ask me how I can like the back end and I'm like ook at me, I'm a back-end boi and I love working on the back-end.

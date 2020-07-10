@@ -5,6 +5,7 @@ import makeStyles from "@material-ui/core/styles/makeStyles";
 import CodeIcon from '@material-ui/icons/Code';
 import FormatQuoteIcon from '@material-ui/icons/FormatQuote';
 import Button from "@material-ui/core/Button";
+import fonts from "../../styles/fonts";
 
 export default function DetailSide({projectData}) {
   const useStyles = makeStyles({
@@ -14,7 +15,8 @@ export default function DetailSide({projectData}) {
     detailHeader: {
       minWidth: '100%', 
       color: "white", 
-      fontSize: 40
+      fontSize: fonts.mediumText.fontSize,
+      fontWeight: 'bold'
     },
     footerLinks: {
       minWidth: "100%"
@@ -26,13 +28,13 @@ export default function DetailSide({projectData}) {
     },
     detailText: {
       color: 'white',
-      fontSize: 25,
+      fontSize: fonts.smallerText.fontSize,
       textAlign: "center",
       marginBottom: 50
     },
     techText: {
       color: 'white',
-      fontSize: 25,
+      fontSize: fonts.smallerText.fontSize,
       textAlign: "center"
     },
   });

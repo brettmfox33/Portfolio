@@ -2,6 +2,7 @@
 import { jsx } from '@emotion/core'
 import { Grid, Paper, Divider } from '@material-ui/core'
 import colors from "../../styles/colors";
+import fonts from "../../styles/fonts";
 
 export default function BreakTwo() {
   return (
@@ -15,7 +16,7 @@ export default function BreakTwo() {
           <Grid md={5} item css={{height: '100%', fontSize: 50}} container direction="row" justify="center" alignItems="center">
             Contact Me
           </Grid>
-          <Grid md={7} item css={{paddingRight: 20, height: '100%', textAlign: "center"}} container direction="row" justify="center" alignItems="center">
+          <Grid md={7} item css={{fontSize: fonts.smallerText.fontSize, paddingRight: 20, height: '100%', textAlign: "center"}} container direction="row" justify="center" alignItems="center">
             I am seeking freelance opportunities within any of my tech stacks.
             Small businesses and non-profits to the front of the line! 
           </Grid>
