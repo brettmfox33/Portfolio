@@ -3,10 +3,11 @@
         "backEnd": {
             "devTools": [
               "Python",
-              "Django",
-              "Django Rest Framework",
+              "Django / Django Rest Framework",
               "PostgreSQL",
-              "Sphinx"
+              "AWS",
+              "Sphinx",
+              "Git / Github"
             ],
             "specializations": [
                 "ETL Scripts",
@@ -22,7 +23,8 @@
                 "Redux",
                 "Redux-Saga",
                 "Socket.io",
-                "Material-UI"    
+                "Figma",
+                "Material-UI"  
             ],
             "specializations": [
                 "State Sharing",
@@ -32,12 +34,6 @@
         },
         "nonTechnical": {
             "devTools": [
-                "Amazon Web Services",
-                "Github",
-                "Git",
-                "PyCharm",
-                "Visual Studio Code",
-                "Adobe XD"
             ],
             "specializations": [
                 "Documentation",
@@ -117,7 +113,7 @@
     {
       "title": "Spatial Repellents: Peru (SR Peru)",
       "backgroundColor": "#16456a",
-      "background": "linear-gradient(28deg, rgba(22,67,102,1) 0%, rgba(22,69,106,1) 60%)",
+      "background": "linear-gradient(241deg, rgba(45,87,120,1) 57%, rgba(37,73,101,1) 100%)",
       "description": "I developed a web portal to input paper forms gathered in the field in Peru. I also designed a PostgreSQL database and migrated data from a MySQL database.",
       "tech": [
         "Django",

@@ -8,8 +8,7 @@ import colors from '../../styles/colors';
 
 const useStyles = makeStyles({
   GridContainer: {
-    marginBottom: 200,
-    borderTop: `2px solid ${colors.main}`
+    marginBottom: 200
   },
 });
 

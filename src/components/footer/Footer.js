@@ -9,7 +9,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 const useStyles = makeStyles({
   footer: {
     height: 200,
-    background: "linear-gradient(180deg, rgba(65,108,106,1) 0%, rgba(103,152,149,1) 41%)",
+    background: "linear-gradient(0deg, rgba(103,152,149,1) 57%, rgba(74,124,121,1) 100%)",
     marginTop: 50
   },
   avatarImage: {

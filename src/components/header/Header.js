@@ -7,8 +7,7 @@ import { Grid } from '@material-ui/core';
 const useStyles = makeStyles({
   header: {
     height: "90vh",
-    // backgroundColor: colors.main
-    background: "linear-gradient(0deg, rgba(65,108,106,1) 0%, rgba(103,152,149,1) 60%)"
+    background: "linear-gradient(180deg, rgba(103,152,149,1) 57%, rgba(74,124,121,1) 100%)"
   },
   content: {
     marginTop: -200,
@@ -20,13 +19,17 @@ const useStyles = makeStyles({
     maxWidth: 200
   },
   bottomText: {
-    marginBottom: 30
+    marginBottom: 30,
+    marginTop: 20
   },
   underText: {
     fontSize: 25,
     marginTop: 70,
-    paddingLeft: 300,
-    paddingRight: 300,
+    paddingLeft: 450,
+    paddingRight: 450,
+  },
+  upperText: {
+    fontSize: 50,
   }
 });
 
@@ -47,7 +50,7 @@ export default function Header() {
         className={classes.content}
       >
         {/* TOP TEXT */}
-        <Grid>
+        <Grid className={classes.upperText}>
           Hello, Brett here!
         </Grid>
         {/* BOTTOM TEXT */}

@@ -5,7 +5,8 @@ import Card from "@material-ui/core/Card";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import CardContent from "@material-ui/core/CardContent";
 import colors from "../../styles/colors";
-import SkillsList from "./SkillsList";
+import VerticalSkillsList from "./VerticalSkillsList";
+import HorizontalSkillsList from "./HorizontalSkillsList";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import data from "../../data.json"
@@ -81,7 +82,7 @@ export default function Skills() {
         <Grid item md={3}>
           <Card className={classes.cardLeft} elevation={1}>
             <CardContent>
-              <SkillsList icon={<StorageIcon css={{fontSize: 40}} />} data={data.skills.backEnd} title="Back-End"/>
+              <VerticalSkillsList icon={<StorageIcon css={{fontSize: 40}} />} data={data.skills.backEnd} title="Back-End"/>
             </CardContent>
           </Card>
         </Grid>
@@ -90,7 +91,7 @@ export default function Skills() {
         <Grid item md={3}>
           <Card className={classes.cardRight} elevation={1}>
             <CardContent>
-              <SkillsList icon={<ComputerIcon css={{fontSize: 40}} />} data={data.skills.frontEnd} title="Front-End"/>
+              <VerticalSkillsList icon={<ComputerIcon css={{fontSize: 40}} />} data={data.skills.frontEnd} title="Front-End"/>
             </CardContent>
           </Card>
         </Grid>
@@ -100,7 +101,7 @@ export default function Skills() {
         <Grid item md={6}>
           <Card className={classes.cardBottom} elevation={1}>
             <CardContent>
-              <SkillsList icon={<SupervisedUserCircleIcon css={{fontSize: 40}} />} data={data.skills.nonTechnical} title="Non-Technical / Other"/>
+              <HorizontalSkillsList icon={<SupervisedUserCircleIcon css={{fontSize: 40}} />} data={data.skills.nonTechnical} title="Non-Technical"/>
             </CardContent>
           </Card>
         </Grid>
